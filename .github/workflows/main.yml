@@ -31,3 +31,5 @@ jobs:
           aws_region: ${{ secrets.AWS_REGION }}
           function_name: hello-function
           zip_file: bundle.zip
+          dry_run: true
+          debug: true
