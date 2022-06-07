@@ -23,7 +23,8 @@ jobs:
         uses: montudor/action-zip@v0.1.0
         with:
           args: zip -qq -r ./bundle.zip ./
-      - uses: yvesgurcan/deploy-lambda-function
+      - deploy: deploy function
+        uses: yvesgurcan/deploy-lambda-function
         with:
           package: bundle.zip
           function-name: hello-function
